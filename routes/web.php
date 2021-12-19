@@ -23,7 +23,6 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function () {
     Route::get('/dashboard', function () {
         return view('admin.index');
     });
-    Route::get('/categories', [ CategoryController::class, 'index']);
-    Route::get('/add-cate', [ CategoryController::class, 'getAdd']);
+   Route::resource('categories', CategoryController::class);
 
 });

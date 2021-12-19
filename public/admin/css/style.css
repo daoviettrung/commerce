@@ -1,0 +1,21 @@
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .5rem 0;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: #495057;
+    background-color: white;
+    background-clip: padding-box;
+    border: 1px solid #d2d6da;
+    appearance: none;
+    border-radius: .375rem;
+    transition: .2s ease;
+}
+
+.form-card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 4rem;
+}
+

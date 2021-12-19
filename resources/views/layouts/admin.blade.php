@@ -8,9 +8,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
-    <link href="{{ asset('admin/css/material-dashboard.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/nucleo-icons.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/nucleo-svg.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/material-dashboard.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
