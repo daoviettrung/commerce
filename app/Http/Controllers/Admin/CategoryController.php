@@ -16,7 +16,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('admin.category.index');
+        $category = Category::all();
+        return view('admin.category.index',['category' => $category]);
     }
 
     /**
@@ -56,7 +57,7 @@ class CategoryController extends Controller
             $category->image = $filename;
         }
         $category->save();
-        return redirect('categories/create')->with('success', 'added successfully');
+        return redirect('categories/create')->with('success', 'Added successfully');
     }
 
     /**

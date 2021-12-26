@@ -38,7 +38,7 @@
     <script src="{{ asset('admin/js/smooth-scrollbar.min.js') }}" defer></script>
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    @yield('script')
+    @yield('scripts')
 </body>
 
 </html>

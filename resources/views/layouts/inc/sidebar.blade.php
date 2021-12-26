@@ -30,7 +30,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="menu_category">
                     <li><a class="dropdown-item"href="{{ url('categories/create') }}">Add category</a></li>
-                    <li><a class="dropdown-item" href="#">View category</a></li>
+                    <li><a class="dropdown-item" href="{{ url('categories') }}">View category</a></li>
                   </ul>
             </li>
             <li class="nav-item mt-3">
