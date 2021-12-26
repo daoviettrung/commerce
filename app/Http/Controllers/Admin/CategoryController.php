@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -35,7 +37,26 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        var_dump($request);die();
+        $category = new Category();
+        $id = Str::random(15);
+        $category->id = $id;
+        $category->name = $request->name_cate;
+        $category->slug = $request->slug_cate;
+        $category->description = $request->description_cate;
+        $category->status = $request->status_cate == true ? "1" : "0";
+        $category->popular = $request->popular_cate == true ? "1" : "0";
+        $category->meta_title = $request->meta_title_cate;
+        $category->meta_descrip = $request->meta_descrip_cate;
+        $category->meta_keywords = $request->meta_keywords_cate;
+        if ($request->hasFile('image_cate')) {
+            $file = $request->file('image_cate');
+            $ext = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $ext;
+            $file->move('assets/uploads/category', $filename);
+            $category->image = $filename;
+        }
+        $category->save();
+        return redirect('categories/create')->with('success', 'added successfully');
     }
 
     /**

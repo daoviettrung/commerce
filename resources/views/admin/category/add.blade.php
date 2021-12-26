@@ -3,9 +3,15 @@
     <h6 class="font-weight-bolder mb-0">Add category</h6>
 @endsection
 @section('content')
+    @if (session()->has('success'))
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+    @endif
     <div class="d-flex mb-4 justify-content-center ">
         <div class="col-lg-6 col-md-6 mb-md-0 mb-4 form-card">
             <form action="{{ url('categories') }}" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
                     <label class="form-label">Name</label>
                     <input type="text" class="form-control" name="name_cate">
@@ -23,7 +29,11 @@
                     <input type="text" class="form-control" name="meta_keywords_cate">
                 </div>
                 <div class="mb-3">
-                    <input type="file" class="form-control form-control-sm" id="formFileSm" name="image_cate">
+                    <label class="form-label">Meta descrip</label>
+                    <input type="text" class="form-control" name="meta_descrip_cate">
+                </div>
+                <div class="mb-3">
+                    <input type="file" class="" name="image_cate">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Status</label>
