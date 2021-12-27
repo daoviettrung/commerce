@@ -17,7 +17,6 @@ class CategoryController extends Controller
     public function index()
     {
         $category = Category::all();
-        var_dump($category[0]);die();
         return view('admin.category.index',['category' => $category]);
     }
 
@@ -80,7 +79,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        echo $id;die();
+        $category = Category::find($id);
+        return view('admin.category.edit', compact('category'));
     }
 
     /**
@@ -92,7 +92,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        echo "hihi";die();
     }
 
     /**
