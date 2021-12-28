@@ -19,8 +19,14 @@
                             alt="Image here"></td>
                     <td>{{ $cate->created_at }}</td>
                     <td>
-                        <a href= "{{url('categories/'.$cate->id.'/edit')}}"><i class="far fa-edit"></i></a>
-                        <a class=""><i class="far fa-trash-alt"></i></a>
+                        <a href="{{ url('categories/' . $cate->id . '/edit') }}"><i class="far fa-edit"></i></a>
+                        <a>
+                            <form method="POST" action="{{ url('categories/' . $cate->id) }}">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit"><i class="far fa-trash-alt"></i></button>
+                            </form>
+                        </a>
                     </td>
                 </tr>
             @endforeach

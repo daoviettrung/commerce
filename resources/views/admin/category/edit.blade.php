@@ -11,7 +11,8 @@
                     {{ session()->get('success') }}
                 </div>
             @endif
-            <form action="{{ url('categories/'.$category->id) }}" method="PUT" enctype="multipart/form-data">
+            <form action="{{ url('categories/'.$category->id) }}" method="POST" enctype="multipart/form-data">
+                @method('PUT')
                 @csrf
                 <div class="mb-3">
                     <label class="form-label">Name</label>

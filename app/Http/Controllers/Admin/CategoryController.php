@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File; 
 
 class CategoryController extends Controller
 {
@@ -17,7 +18,7 @@ class CategoryController extends Controller
     public function index()
     {
         $category = Category::all();
-        return view('admin.category.index',['category' => $category]);
+        return view('admin.category.index',compact('category'));
     }
 
     /**
@@ -92,7 +93,28 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        echo "hihi";die();
+        $category = Category::find($id);
+        if($request->hasFile('image_cate')){
+            $path = 'assets/uploads/category/' . $category->image;
+            if(File::exists($path)){
+                File::delete($path);
+            }
+            $file = $request->file('image_cate');
+            $ext = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $ext;
+            $file->move('assets/uploads/category', $filename);
+            $category->image = $filename;
+        }
+        $category->name = $request->name_cate;
+        $category->slug = $request->slug_cate;
+        $category->description = $request->description_cate;
+        $category->status = $request->status_cate == true ? "1" : "0";
+        $category->popular = $request->popular_cate == true ? "1" : "0";
+        $category->meta_title = $request->meta_title_cate;
+        $category->meta_descrip = $request->meta_descrip_cate;
+        $category->meta_keywords = $request->meta_keywords_cate;
+        $category->update();
+        return redirect('categories');
     }
 
     /**
@@ -103,6 +125,6 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        echo "hahah";die();
     }
 }
