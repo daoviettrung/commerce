@@ -21,7 +21,8 @@
                 </a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link text-white active bg-gradient-primary dropbtn btn btn-secondary dropdown-toggle" href="{{ url('categories') }}" id="menu_category" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link text-white active bg-gradient-primary dropbtn btn btn-secondary dropdown-toggle"
+                    href="{{ url('categories') }}" id="menu_category" data-bs-toggle="dropdown" aria-expanded="false">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">category</i>
                     </div>
@@ -29,9 +30,22 @@
                     <span class="nav-link-text ms-1">Category</span>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="menu_category">
-                    <li><a class="dropdown-item"href="{{ url('categories/create') }}">Add category</a></li>
+                    <li><a class="dropdown-item" href="{{ url('categories/create') }}">Add category</a></li>
                     <li><a class="dropdown-item" href="{{ url('categories') }}">View category</a></li>
-                  </ul>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link text-white active bg-gradient-primary dropbtn btn btn-secondary dropdown-toggle"
+                    href="{{ url('product') }}" id="menu_product" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">product</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Product</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="menu_product">
+                    <li><a class="dropdown-item" href="{{ url('product/create') }}">Add product</a></li>
+                    <li><a class="dropdown-item" href="{{ url('product') }}">View product</a></li>
+                </ul>
             </li>
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>

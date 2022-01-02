@@ -114,7 +114,7 @@ class CategoryController extends Controller
         $category->meta_descrip = $request->meta_descrip_cate;
         $category->meta_keywords = $request->meta_keywords_cate;
         $category->update();
-        return redirect('categories');
+        return redirect('categories')->with('status','Updated success');
     }
 
     /**
@@ -133,6 +133,6 @@ class CategoryController extends Controller
             }
         }
         $category->delete();
-        return redirect('categories');
+        return redirect('categories')->with('status','Deleted success');
     }
 }

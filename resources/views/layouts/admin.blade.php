@@ -37,7 +37,15 @@
     <script src="{{ asset('admin/js/smooth-scrollbar.min.js') }}" defer></script>
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    {{-- sweetalert --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @if (session('status'))
+        <script>
+            swal("{{ session('status') }}");
+        </script>
+    @endif
     @yield('scripts')
+
 </body>
 
 </html>
