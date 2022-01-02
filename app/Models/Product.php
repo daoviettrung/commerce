@@ -18,11 +18,16 @@ class Product extends Model
         'description',
         'original_price',
         'selling_price',
-        'image_price',
+        'image',
         'status',
         'trending',
         'meta_title',
         'meta_descrip',
         'meta_keywords',
     ];
+
+    public function categories()
+    {
+        return $this->belongsTo('App\Models\Category', 'category_id', 'id');
+    }
 }

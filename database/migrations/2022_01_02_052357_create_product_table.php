@@ -22,7 +22,7 @@ class CreateProductTable extends Migration
             $table->longText('description');
             $table->integer('original_price');
             $table->integer('selling_price');
-            $table->string('image_price');
+            $table->string('image');
             $table->tinyInteger('status')->defaultValue('0');
             $table->tinyInteger('trending')->defaultValue('0');
             $table->string('meta_title');

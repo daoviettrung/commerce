@@ -38,3 +38,7 @@
     word-break: break-word !important;
 }
 
+.form-select {
+    background-color: white;
+}
+
