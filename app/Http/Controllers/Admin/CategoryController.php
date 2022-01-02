@@ -125,6 +125,14 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        echo "hahah";die();
+        $category = Category::find($id);
+        if($category->image){
+            $path = 'assets/uploads/category/' . $category->image;
+            if(File::exists($path)){
+                File::delete($path);
+            }
+        }
+        $category->delete();
+        return redirect('categories');
     }
 }

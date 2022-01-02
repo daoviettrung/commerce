@@ -24,3 +24,17 @@
     height: 57px;
 }
 
+.btn-tool{
+    margin-left: 1rem;
+    width: 31px;
+    height: 30px;
+    border-radius: 7px;
+    border: #d2d6da;
+}
+
+.column-show{
+    white-space: unset !important;
+    word-wrap: break-word;
+    word-break: break-word !important;
+}
+

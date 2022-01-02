@@ -27,7 +27,6 @@
         @include('layouts.inc.navbar')
         <div class="container-fluid py-4">
             @yield('content')
-            @include('layouts.inc.footer')
         </div>
 
     </main>
