@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\SlideController;
 use App\Http\Controllers\Client\ClientController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,5 +25,6 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function () {
     });
    Route::resource('categories', CategoryController::class);
    Route::resource('product', ProductController::class);
+   Route::resource('slide', SlideController::class);
 
 });

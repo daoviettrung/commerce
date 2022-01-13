@@ -15,6 +15,7 @@
     <link href="{{ asset('client/css/prettyPhoto.css') }}" rel="stylesheet">
     <link href="{{ asset('client/css/price-range.css') }}" rel="stylesheet">
     <link href="{{ asset('client/css/responsive.css') }}" rel="stylesheet">
+    <link href="{{ asset('client/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body class="">

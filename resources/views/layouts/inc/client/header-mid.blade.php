@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-4 clearfix">
                 <div class="logo pull-left">
-                    <a href="index.html"><img src="{{asset('client/images/logo.png')}}" alt="" /></a>
+                    <p class = "name-shop">Như-Shop</p>
                 </div>
                 <div class="btn-group pull-right clearfix">
                     <div class="btn-group">

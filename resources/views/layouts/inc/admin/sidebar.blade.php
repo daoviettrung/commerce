@@ -46,6 +46,19 @@
                     <li><a class="dropdown-item" href="{{ url('product')}}">View product</a></li>
                 </ul>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link text-white active bg-gradient-primary dropbtn btn btn-secondary dropdown-toggle"
+                    href="{{ url('product') }}" id="menu_product" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">receipt_long</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Slide</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="menu_product">
+                    <li><a class="dropdown-item" href="{{ url('slide/create')}}">Add slide</a></li>
+                    <li><a class="dropdown-item" href="{{ url('slide')}}">View slide</a></li>
+                </ul>
+            </li>
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
             </li>
