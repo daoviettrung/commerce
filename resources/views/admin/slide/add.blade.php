@@ -18,7 +18,7 @@
                     <input id="name" required class="form-control" name="name_slide">
                 </div>
                 <div class="mb-3">
-                    <input type="file" class="" name="image_slide">
+                    <input type="file" name="image_slide">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Description</label>

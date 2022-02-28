@@ -9,10 +9,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
     <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/nucleo-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/nucleo-svg.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/material-dashboard.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
@@ -21,20 +17,20 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 </head>
 
-<body class="g-sidenav-show  bg-gray-200">
-    @include('layouts.inc.admin.sidebar')
-    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-        @include('layouts.inc.admin.navbar')
-        <div class="container-fluid py-4">
-            @yield('content')
+<body>
+    @include('layouts.inc.admin.navbar')
+    <div id="content">
+        <div class="row">
+          <div class="col-md-2">
+            @include('layouts.inc.admin.sidebar')
+          </div>
+          <div class="col-md-10">
+            
+          </div>
         </div>
-
-    </main>
+      </div>
     <!-- Scripts -->
-    <script src="{{ asset('admin/js/popper.min.js') }}" defer></script>
     <script src="{{ asset('admin/js/bootstrap.min.js') }}" defer></script>
-    <script src="{{ asset('admin/js/perfect-scrollbar.min.js') }}" defer></script>
-    <script src="{{ asset('admin/js/smooth-scrollbar.min.js') }}" defer></script>
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     {{-- sweetalert --}}
